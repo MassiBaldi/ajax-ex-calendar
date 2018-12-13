@@ -11,12 +11,17 @@ $(document).ready(function(){
   var gennaio17 = moment("2017-01", "YYYY-MM").daysInMonth();
   console.log(gennaio17);
   //creo una list con un ciclo for a seconda di quanti giorni ha un mese
+
   for (var i = 1; i <= gennaio17; i++) {
-    var liGiorni = '<li>' + i + ' Gennaio'+'</li>';
-    $('ul').append(liGiorni);
-    console.log(liGiorni);
+    var giorni = i;
+
+    $('.giorno').append(giorni + ' Gennaio '+'<br>');
+    console.log(giorni);
+
 
   }
+
+
   //chiamo Api per sapere che feste ci sono nel mese
   $.ajax({
     url:'https://holidayapi.com/v1/holidays',
@@ -28,13 +33,29 @@ $(document).ready(function(){
     },
     method: 'GET',
     success: function(data){
-      console.log(data);
 
+      var arrayFeste = data;
+      console.log(arrayFeste);
+
+      for (var i = 0; i < arrayFeste.holidays.length; i++) {
+
+        var feste = arrayFeste.holidays[i].date;
+        console.log(feste);
+
+        var dataFesta = parseInt(moment(feste).format('D'));
+        console.log(dataFesta);
+
+        // if( ?giorni? == dataFesta){
+        //   $('.giorno').addClass('active');
+
+      }
 
     },
     error: function(){
 
     }
+
+
 
   });
 

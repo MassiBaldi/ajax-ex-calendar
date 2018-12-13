@@ -20,6 +20,9 @@
   text-align: center;
   background: white;
 }
-ul li {
-  font-size: 8px;
+.giorno {
+  font-size: 11px;
+}
+.active {
+  color: red;
 }
