@@ -5,20 +5,52 @@
 }
 .conteiner {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
-  background: grey;
+  background-image: url('https://www.radiobuonconsiglio.it/wp-content/uploads/2018/11/calendario.jpg');
 }
 .calendario {
+  width: 60%;
+  height: 90%;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100%;
-  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  padding: 0 30px;
+  border-bottom: 3px solid black;
+}
+.header i {
+  font-size: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.navMesi {
+  border-radius: 5px;
   background: white;
+}
+.navPaesi {
+  float: right;
+}
+.griglia {
+  width: 100%;
+  height: calc(100% - 90px);
+  text-align: center;
+}
+.griglia ul {
+  list-style: none;
+  padding: 15px;
+}
+.griglia li {
+  font-size: 13px;
+}
+.template {
+  display: none;
 }
 .giorno {
   font-size: 11px;
