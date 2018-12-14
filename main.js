@@ -8,6 +8,7 @@
 
 $(document).ready(function(){
   var arrayCodeLang = [
+    {'IT': 'Italy'},
     {'AO': 'Angola'},
     {'AT': 'Austria'},
     {'AU': 'Australia'},
@@ -50,7 +51,6 @@ $(document).ready(function(){
     {'IN': 'India'},
     {'IL': 'Israel'},
     {'IS': 'Iceland'},
-    {'IT': 'Italy'},
     {'JP': 'Japan'},
     {'KZ': 'Kazakhstan'},
     {'LS': 'Lesotho'},
